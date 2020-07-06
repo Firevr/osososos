@@ -1,0 +1,218 @@
+! Cisco IOS Software, C2960 Software (C2960-LANBASEK9-M), Version 15.0(2)SE6, RELEASE SOFTWARE (fc2)
+! 
+! Image: Software: C2960-LANBASEK9-M, 15.0(2)SE6, RELEASE SOFTWARE (fc2)
+! Image: Compiled: Wed 09-Apr-14 03:40 by prod_rel_team
+! Image: flash:/c2960-lanbasek9-mz.150-2.SE6/c2960-lanbasek9-mz.150-2.SE6.bin
+! Chassis type: WS-C2960+24TC-L
+! Memory: main 131072K
+! Processor ID: FOC1914S353
+! CPU: PowerPC405
+! 
+! VTP: VTP Version capable             : 1 to 3
+! VTP: VTP version running             : 2
+! VTP: VTP Domain Name                 : Beukay-VTP
+! VTP: VTP Pruning Mode                : Enabled
+! VTP: VTP Traps Generation            : Disabled
+! VTP: Device ID                       : 40a6.e89e.2700
+! VTP: Feature VLAN:
+! VTP: --------------
+! VTP: VTP Operating Mode                : Client
+! VTP: Maximum VLANs supported locally   : 255
+! VTP: Number of existing VLANs          : 41
+! VTP: Configuration Revision            : 41
+! VTP: MD5 digest                        : 0x4B 0x41 0xDF 0xD1 0xA3 0xAC 0xCF 0x8E 
+! VTP:                                     0xD9 0x01 0x08 0xC7 0x45 0x7F 0x9D 0x2C 
+! 
+! NAME: "1", DESCR: "WS-C2960+24TC-L"
+! PID: WS-C2960+24TC-L   , VID: V01  , SN: FOC1914S353
+! 
+! NAME: "GigabitEthernet0/1", DESCR: "1000BaseLX SFP"
+! PID: GLC-LH-SMD          , VID: V01  , SN: FNS17460C60     
+! 
+! 
+!
+!
+version 15.0
+service config
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname AD1-2-01
+!
+boot-start-marker
+boot-end-marker
+!
+enable password cy0607
+!
+no aaa new-model
+system mtu routing 1500
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3902678784
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3902678784
+ revocation-check none
+ rsakeypair TP-self-signed-3902678784
+!
+!
+crypto pki certificate chain TP-self-signed-3902678784
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33393032 36373837 3834301E 170D3933 30333031 30303033 
+  35325A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 39303236 
+  37383738 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100B930 E55C07D5 EAA5D4BC 2B70DB2C 5326306D 5DC51783 A65DD192 61EFAA7F 
+  A56A6A33 64BE5D65 1A3FAE39 68C963D3 D8C05923 80273475 21C90716 65461A4E 
+  826C14B4 DDAC7928 6A3764BB B8724799 F95CAEE7 D677BADC C91E5846 8F651EDF 
+  96179F9F D84D2061 575309B8 590BAE49 E233E1F0 22BCD589 66F951DE 8E28D871 
+  519D0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14BE3988 013D99B6 C0F185CF A8D48AAB 9CA86A39 32301D06 
+  03551D0E 04160414 BE398801 3D99B6C0 F185CFA8 D48AAB9C A86A3932 300D0609 
+  2A864886 F70D0101 05050003 8181005E B0C3AA55 B059F03A DA2C8DD4 C3EFF363 
+  EFF51D01 79C4491B 6F2A3764 0F2B3006 2540572D 5B8CA32A B85880D9 AFE22792 
+  A4CB5EC4 8C704858 0A00F967 E6B86CCA 3CD8A993 084418F3 D87F2C0B F1CAB19D 
+  EB12299C 37F11D72 44070476 5EF07770 37491C9B B2705516 1F9FDA33 84A2BCAB 
+  5D826638 CC6B2D12 2C19B620 250DF5
+  	quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/11
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/12
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/13
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/14
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/15
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/16
+ switchport access vlan 52
+ switchport mode access
+!
+interface FastEthernet0/17
+ switchport access vlan 42
+ switchport mode access
+!
+interface FastEthernet0/18
+ switchport access vlan 42
+ switchport mode access
+!
+interface FastEthernet0/19
+ switchport access vlan 42
+ switchport mode access
+!
+interface FastEthernet0/20
+ switchport access vlan 42
+ switchport mode access
+!
+interface FastEthernet0/21
+ switchport access vlan 42
+ switchport mode access
+!
+interface FastEthernet0/22
+ switchport access vlan 42
+ switchport mode access
+!
+interface FastEthernet0/23
+ switchport access vlan 41
+ switchport mode access
+!
+interface FastEthernet0/24
+ switchport access vlan 42
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ switchport mode trunk
+!
+interface Vlan1
+ ip address dhcp
+!
+interface Vlan102
+ ip address 10.2.255.19 255.255.255.0
+!
+ip http server
+ip http secure-server
+!
+!
+line con 0
+line vty 0 4
+ password cxfc@beukay30300
+ login
+line vty 5 15
+ login
+!
+end
+
