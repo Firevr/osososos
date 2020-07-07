@@ -184,7 +184,7 @@ interface FastEthernet0/22
  switchport mode access
 !
 interface FastEthernet0/23
- switchport access vlan 41
+ switchport access vlan 42
  switchport mode access
 !
 interface FastEthernet0/24
