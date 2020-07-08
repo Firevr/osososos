@@ -73,7 +73,7 @@ vrf definition Mgmt-vrf
  address-family ipv6
  exit-address-family
 !
-enable secret 5 $1$rVgg$Fx.OLakwKk4pu0h3Zl.st0
+enable secret 5 <secret hidden>
 !
 no aaa new-model
 clock timezone GMT 8 0
@@ -145,7 +145,7 @@ spanning-tree mode rapid-pvst
 spanning-tree extend system-id
 !
 !
-username cisco privilege 15 password 7 045D071F002F1D1C584E5547
+username cisco privilege 15 password 7 <secret hidden>
 !
 redundancy
  mode sso
@@ -650,7 +650,7 @@ route-map vpn permit 10
  match ip address vpn
  set ip next-hop 10.10.254.10
 !
-snmp-server community public RO
+snmp-server community <configuration removed>
 snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
 snmp-server enable traps flowmon
 snmp-server enable traps entity-perf throughput-notif
@@ -755,7 +755,7 @@ line aux 0
  stopbits 1
 line vty 0 4
  privilege level 15
- password 7 07092D554107485746455B5C
+ password <secret hidden>
  login
 line vty 5 15
  login
